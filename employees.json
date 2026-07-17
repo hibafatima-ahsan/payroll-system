@@ -1,0 +1,38 @@
+[
+    {
+        "id": "01",
+        "name": "ayela",
+        "department": "cs",
+        "basic_salary": 2000.0,
+        "bonus": 200.0,
+        "tax": 100.0,
+        "net_salary": 2100.0
+    },
+    {
+        "id": "02",
+        "name": "hiba",
+        "department": "ai",
+        "basic_salary": 3000.0,
+        "bonus": 300.0,
+        "tax": 150.0,
+        "net_salary": 3150.0
+    },
+    {
+        "id": "03",
+        "name": "hadi",
+        "department": "web dev",
+        "basic_salary": 20000.0,
+        "bonus": 2000.0,
+        "tax": 1000.0,
+        "net_salary": 21000.0
+    },
+    {
+        "id": "04",
+        "name": "ali",
+        "department": "business",
+        "basic_salary": 21000.0,
+        "bonus": 2100.0,
+        "tax": 1050.0,
+        "net_salary": 22050.0
+    }
+]
