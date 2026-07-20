@@ -173,7 +173,26 @@ def payroll_summary():
     print("\n========== Payroll Summary ==========")
     print("Total Employees :", len(employees))
     print("Total Payroll   : $", total_salary)
+# ----------------------------
+# Display Highest Salary
+# ----------------------------
+def display_highest_salary():
+    employees = load_employees()
 
+    if not employees:
+        print("\nNo Employee Found!\n")
+        return
+
+    highest_paid = max(employees, key=lambda emp: emp["net_salary"])
+
+    print("\n========== Highest Salary Employee ==========\n")
+    print(f"ID         : {highest_paid['id']}")
+    print(f"Name       : {highest_paid['name']}")
+    print(f"Department : {highest_paid['department']}")
+    print(f"Basic      : ${highest_paid['basic_salary']}")
+    print(f"Bonus      : ${highest_paid['bonus']}")
+    print(f"Tax        : ${highest_paid['tax']}")
+    print(f"Net Salary : ${highest_paid['net_salary']}")
 
 # ----------------------------
 # Menu
@@ -189,8 +208,8 @@ def menu():
         print("4. Update Salary")
         print("5. Delete Employee")
         print("6. Payroll Summary")
-        print("7. Exit")
-
+        print("7. Display Highest Salary")
+        print("8. Exit")
         choice = input("Enter Choice: ")
 
         if choice == "1":
@@ -212,9 +231,10 @@ def menu():
             payroll_summary()
 
         elif choice == "7":
+            display_highest_salary()
+        elif choice=="8":    
             print("Thank You!")
             break
-
         else:
             print("Invalid Choice")
 
